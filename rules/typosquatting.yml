@@ -1,0 +1,10 @@
+rules:
+  - id: check-github-actions-typos
+    pattern-regex: \buses:\s*ac(?!tions/)\w*
+    message: Usage of specific wrong action detected. Please review.
+    severity: ERROR
+    languages:
+      - yaml
+    path:
+      - "**/*.yml"
+      - "**/*.yaml"
